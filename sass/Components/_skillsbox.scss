@@ -1,0 +1,35 @@
+.skill-box{
+    background-color: rgba($color:$color-white, $alpha: .8);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2.5rem 2.5rem 5rem  2.5rem;
+    border-radius: 3.5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    transition:  all 0.2s;
+
+
+    @include respond(tab-port){
+        width: 70%;
+        margin-left: 15%;
+    }
+    &__icons{
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right,$color-primary-light, $color-primary-dark);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-1.25rem) scale(1.05);
+    }
+
+    &__text{
+        min-height: 10rem;
+    }
+
+
+}

@@ -1,0 +1,23 @@
+#mySong{
+    width:0;
+    height:0;
+}
+
+.audio{
+    top:0;
+    margin-left:7rem;
+    &__img{
+        height:5%;
+        width: 4%;  
+        border-radius: 10rem;
+        opacity: 0.1;   
+        cursor:pointer;
+
+        @include respond(phone){
+            width: 20%;
+            margin-left:-5rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,206 @@
+.card{
+    perspective: 150rem;
+    position: relative;
+    height:50rem;
+    margin: 0 2rem;
+    width: calc(100% -4rem);
+    top:5rem;
+    
+    &__side{
+        color:white;
+        font-size: 2rem;
+        height: 40rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left:0rem;
+        width:100%;
+        backface-visibility: hidden;
+        border-radius:  5rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+        
+        //để ảnh không bị tràn
+        overflow: hidden;
+
+        &--front{
+            background-color:$color-white;
+        }
+        &--back{
+            background-color: green;
+            transform: rotateY(180deg); 
+
+
+            &-1{
+                background-image: linear-gradient(to right, $color-secondary-light,$color-secondary-dark);
+
+            }
+
+            &-2{
+                background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right, $color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+      
+       
+    }
+    &__picture{
+        background-size: cover;
+        background-blend-mode: screen;
+        height:22rem;
+       
+        clip-path: ellipse(80% 70% at 50% 30%);
+        &--1{
+            background-image: linear-gradient(to right, $color-secondary-light,$color-secondary-dark),
+            url(../../img/calendar.jpg);
+        }
+        &--2{
+            background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark),
+            url(../../img/mindmap.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to right, $color-tertiary-light,$color-tertiary-dark),
+            url(../../img/target.jpg);
+        }
+    }
+   
+    &__heading{
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: right;
+        text-transform: uppercase;
+        color:$color-white;
+        position: absolute;
+        top:10rem;
+        right:2rem;
+        width: 75%;
+    }
+
+    &__heading-span{
+
+        //  giúp bo tron ở phần cuối của heading-span
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        border-radius: 5rem;
+        padding:0.4rem 1.5rem;
+      
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light,0.8),
+            rgba($color-secondary-dark,0.8));
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.8),
+            rgba($color-primary-dark,0.8));
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,0.8),
+            rgba($color-tertiary-dark,0.8));
+        }
+
+       
+    }
+
+
+    &__details{
+        padding: 3rem;
+        color:$color-grey;
+
+        ul{
+            list-style: none;
+            width: 70%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding:1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid #dbdbdb;
+                }
+            }
+            
+        }
+    }
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__cta{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        width:80%;
+        
+    }
+
+    &__price-box{
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price-value{
+        font-size: 5rem;
+        font-weight: 100;
+        margin-bottom: 5rem;
+    }
+
+    @include respond(tab-port) {
+        
+        width:80%;
+        margin-left: 10%;
+        height: auto;
+
+        
+        &__side {
+
+            
+            height: 40%;
+            width:100%;
+            border-radius: 5rem 5rem 0rem 0rem;
+            position: relative;
+
+            &--back {
+
+                transform: rotateY(0);
+                border-radius: 0rem 0rem 5rem 5rem;
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 2rem;
+            padding:0.5rem;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

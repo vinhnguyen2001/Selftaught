@@ -1,0 +1,23 @@
+/* animation-hay */
+
+.heading-primary {
+    animation-name: animationtest;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes animationtest {
+    0% {
+        opacity: 2;
+        transform: translate(0, -100px);
+    }
+    80% {
+        transform: translate(0, -20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -10px)
+    }
+}
