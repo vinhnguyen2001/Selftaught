@@ -4,14 +4,14 @@
     &__group{
         position: relative;
        
+        
     }
    
     &__group:last-child{
         margin-top: 3rem;
         
     }
-   
-    
+
     &__input{
         
         font-size: 1.5rem;
@@ -56,9 +56,7 @@
       top: -4.5rem;
       left: 2.1rem;
       background-color: transparent;
-      transition: all .5s;
-
-      
+      transition: all .5s;  
     }
 
   
@@ -77,6 +75,13 @@
     &__radio-group{
         display: inline-block;
         width: 20%;
+     
+        
+        @include respond (phone){
+           margin:0 1rem;
+           width:40%;
+        }
+      
     }
 
     &__radio-label{
@@ -95,6 +100,7 @@
         position: absolute;
         left: 1rem;
         top: -0.5rem;
+       
 
         &::after{
             opacity: 0;
@@ -109,6 +115,19 @@
             transform: translate(-50%, -50%);
             background-color: $color-primary;
         }
+
+        @include respond(phone){
+           
+            height: 1.5rem;
+            width: 1.5rem;
+            border: .1rem solid $color-primary;
+            
+            &:not(:first-child){
+                padding:100%;
+                right:0;
+            }
+        }
+
     }
 
     &__radio-input:checked ~ &__radio-label  &__radio-button::after{
