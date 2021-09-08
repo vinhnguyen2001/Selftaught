@@ -1,7 +1,10 @@
 .enroll{
     background-image: radial-gradient(150% 200% ellipse at -10%,rgba($color-white,0.8) 50%, transparent 80%),
-    url("../../img/letgetstarted.jpg");
+    url("../img/letgetstarted.jpg");
    
+    @include respond(phone){
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.8), rgba($color-white,0.8));
+    }
     background-size: cover;
     box-shadow: 0 1.5rem 4rem rgba($color-black,0.8);
     border-radius: 5rem;
