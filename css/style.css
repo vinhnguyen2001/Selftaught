@@ -1278,7 +1278,7 @@ body {
   display: inline-flex;
   font-size: 1.4rem;
   margin-right: 0rem;
-  z-index: 9999;
+  z-index: 3000;
   /* animation*/
 }
 
@@ -1378,12 +1378,12 @@ body {
 .nav-btn {
   position: relative;
   justify-content: center;
-  padding-right: 1.5rem;
+  padding-right: 2rem;
   align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 3100;
   display: none;
 }
 
@@ -1401,7 +1401,7 @@ body {
 }
 
 .nav-btn, .nav-btn__lines::after, .nav-btn__lines::before {
-  width: 1.5rem;
+  width: 2rem;
   height: 0.1rem;
   background-color: #fff;
   transition: all 0.5s ease-in-out;
@@ -1430,7 +1430,7 @@ body {
     background-color: #8e9efc;
     position: absolute;
     height: 80%;
-    width: 70%;
+    width: 0%;
     max-width: 30rem;
     top: 0;
     right: 0;
@@ -1441,7 +1441,6 @@ body {
     line-height: 2rem;
     overflow-y: auto;
     opacity: 1;
-    transform: translate(35rem, 0rem);
     transition: all 0.5s ease-in-out;
     z-index: -1;
   }
@@ -1451,7 +1450,7 @@ body {
   }
   .nav.open {
     z-index: 2000;
-    transform: translate(1rem, 0rem);
+    width: 70%;
     padding-top: 6rem;
     padding-left: 2rem;
     margin-top: 0;
