@@ -5,6 +5,11 @@ body {
     line-height: 1.7;
     color: $color-grey;
     padding: 30px;
+
+
+    @include respond(phone){
+        padding: 0 15px;
+    }
 }
 
 

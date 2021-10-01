@@ -54,15 +54,15 @@
         clip-path: ellipse(80% 70% at 50% 30%);
         &--1{
             background-image: linear-gradient(to right, $color-secondary-light,$color-secondary-dark),
-            url(../../img/calendar.jpg);
+            url(../img/calendar.jpg);
         }
         &--2{
             background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark),
-            url(../../img/mindmap.jpg);
+            url(../img/mindmap.jpg);
         }
         &--3{
             background-image: linear-gradient(to right, $color-tertiary-light,$color-tertiary-dark),
-            url(../../img/target.jpg);
+            url(../img/target.jpg);
         }
     }
    
